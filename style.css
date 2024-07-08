@@ -1,0 +1,120 @@
+* {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.turn-container {
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h3 {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #d1c4e9;
+}
+
+.turn-container .turn-box {
+    border: 2px solid #d1c4e9;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: #1c1e21;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#turn-x {
+    background-color: #ff4081;
+}
+
+#turn-o {
+    background-color: #3a86ff;
+}
+
+.turn-container .turn-box:nth-child(even) {
+    border-right: none;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    z-index: -1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300px;
+    width: 300px;
+    margin: 30px auto;
+    border: 3px solid #d1c4e9;
+    background-color: #1c1e21;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 1px solid #d1c4e9;
+    background-color: #3a3b3c;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+.box:hover {
+    background-color: #ff4081;
+    color: #fff;
+}
+
+#play-again {
+    background-color: #ff4081;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#play-again:hover {
+    padding: 10px 50px;
+    background-color: #e91e63;
+    color: #fff;
+}
